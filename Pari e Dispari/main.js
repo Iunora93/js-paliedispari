@@ -8,18 +8,10 @@ Dichiariamo chi ha vinto. */
 const userNumber = Number(prompt("Inserisci un numero da 1 a 5"));
 console.log(userNumber);
 
-function cpuNumber(min, max) {
-    function Math.floor(Math.random() * (max - min + 1)) + min;    
-}
-console.log(cpuNumber);
+function cpuNumber(max) {
+    return Math.floor(Math.random() * max);
+  }
+  console.log(cpuNumber(5));
 
-
-/* let = 0;
-while (i < userNumber.length);{
-    console.log(userNumber);
-    userNumber = userNumber.length[i];
-
-    i++;
-} */
-
-
+  let sum = userNumber + cpuNumber;
+  console.log(sum);
