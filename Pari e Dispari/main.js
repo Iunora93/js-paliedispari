@@ -5,24 +5,25 @@ Sommiamo i due numeri
 Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 Dichiariamo chi ha vinto. */
 
+const choice = prompt("Scegli pari o dispari");
+console.log(choice);
+
 /* Chiedo all'utente di inserire un numero */
 const userNumber = Number(prompt("Inserisci un numero da 1 a 5"));
 console.log(userNumber);
 
 /* Genero con una funzione un numero random da 0 a 5 */
-function cpuNumber(max) {
-    return Math.floor(Math.random() * max);
+function getRndInteger(min, max) {
+    return Math.floor(Math.random() * (max - min) ) + min;
   }
+  
   /* Dichiaro al numero random il max e lo stampo in console */
-  const cpuNum = cpuNumber(5);
+  const cpuNum = getRndInteger(1, 5);
   console.log(cpuNum);
 
   /* Sommo il risultato dei due numeri */
   let sum = cpuNum + userNumber;
   console.log(sum);
-
-element = 0;
-let pariDispari = sum;
 
 /* Stabiliamo se la somma è pari o dispari */
 function pariDispari( element ){
@@ -32,4 +33,9 @@ function pariDispari( element ){
         return "dispari";
     }    
 }
-element.alert("il numero è pari");
+
+if(pariDispari(sum) === choice){
+    alert("Hai vinto")
+}else{
+    alert("Hai perso")
+}
