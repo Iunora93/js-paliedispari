@@ -1,16 +1,21 @@
 `use strict`
 
-const word = prompt("Inserisci una parola");
-console.log(word);
+const userWord = prompt("Inserisci una parola");
+console.log(userWord);
 
-
-let found = false;
-
-function checkWord(element) {
-    for (let i = word.length -1; i >= 0; i--);
-    if ( word === element && found != word.length) {
-    return true;
-    alert("E' la parola giusta")
+function checkWord(word) {
+    let reverseWord = "";
+    for (let i = word.length -1; i >= 0; i--){
+        reverseWord = reverseWord + word[i];
+    }
+    if ( reverseWord === word) {       
+        return true;
+    }else{
+        return false;
+    }
 }
-    console.log(word[i]);
+if (checkWord(userWord) === true){
+    alert("la parola è palindroma");
+}else{
+    alert("non è palindroma");
 }
