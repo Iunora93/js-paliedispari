@@ -13,5 +13,7 @@ function cpuNumber(max) {
   }
   console.log(cpuNumber(5));
 
-  let sum = userNumber + cpuNumber;
-  console.log(sum);
+  const cpuNum = cpuNumber(5);
+  console.log(cpuNum);
+  cpuNum = userNumber + cpuNumber;
+  console.log(cpuNum);
