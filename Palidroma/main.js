@@ -10,6 +10,7 @@ function checkWord(element) {
     for (let i = word.length -1; i >= 0; i--);
     if ( word === element && found != word.length) {
     return true;
+    alert("E' la parola giusta")
 }
     console.log(word[i]);
 }
